@@ -1,4 +1,4 @@
-这是小懒猫AI推出的闲聊SDK1.0.1版本。这个SDK是pyc文件,
+这是小懒猫AI推出的闲聊SDK1.0.1版本。这个SDK是pyd文件,
 
 示例：
 
@@ -16,6 +16,9 @@ while True:
     
     print(q)
 
-compare.pyc:
+compare.pyd:
 
-这是一个chat.pyc的依赖项
+这是一个chat.pyd的依赖项
+
+pyd文件：
+pyd文件不可反编译
