@@ -28,7 +28,17 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 
 本SDK的代码禁止个人获取，只提供服务。
 
+使用方法：
+
+1.下载SDK之后解压，建议下载zip文件（git下载可跳过）
+
+2.把解压的文件改为您的项目名
+
+3.编写py文件，导入参考示例
+
+4.运行
+
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
 
-gitee地址2：https://gitee.com/Lazy-cat-Xiaolanmao/pychatbot
+gitee地址2：https://gitee.com/Lazy-cat-Xiao
 
