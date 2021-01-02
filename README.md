@@ -24,6 +24,36 @@ pyd文件：
 
 pyd文件采用cython在windows编译的二进制文件，是无法进行反编译。
 
+函数：
+
+1.chats.chat(self,ji,name,age,xibe,like)
+
+self填任何东西都可以，建议填None
+
+ji填问题
+
+name填机器人的名字
+
+联系邮箱：earuil@outlook.com
+
+age填机器人的年龄
+
+xibe填机器人的性别
+
+like填机器人的爱好
+
+2.compare(str1,str2)
+
+str1，str2填对比的文本
+
+要求：
+
+1.Python3.8.6rc1(必须要下载这个版本)
+
+下载地址：https://www.python.org/downloads/release/python-386rc1/
+
+2.requests2.24
+
 源代码：
 
 本SDK的代码禁止个人获取，只提供服务。
