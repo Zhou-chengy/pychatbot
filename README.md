@@ -68,6 +68,18 @@ str1，str2填对比的文本
 
 4.运行
 
+module.pyd:
+
+这个文件可以为用户定制机器人编写语料库在module-tool文件
+
+函数
+
+module.train(self,filename,modulename)#self可能不填
+
+module.chat(self,q,modulename)q指问题
+
+警告：如果语料过长，可能会引起报错
+
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
 
 gitee地址2：https://gitee.com/Lazy-cat-Xiao
