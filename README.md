@@ -70,13 +70,41 @@ str1，str2填对比的文本
 
 module.pyd:
 
-这个文件可以为用户定制机器人编写语料库在module-tool文件
+这个文件可以为用户定制机器人编写语料库
+
+预训练模型在module-tool中
+
+chat.pkl：
+
+这个文件包含137条语料
+
+chat.txt:
+
+chat.pkl对应文件数据集，自己编写数据集请参考
+
+数据集编写规范：
+
+--问题--(空一格) --答案--(空一格) --相似度--(如1，0.9，0.8，0.7，0.33)
 
 函数
 
-module.train(self,filename,modulename)#self可能不填
+训练函数
 
-module.chat(self,q,modulename)q指问题
+module.train(self,filename,modulename)
+
+self不填
+
+filename填数据集文件名(是txt文件)
+
+modulename是模型名
+
+模型使用函数：
+
+module.chat(self,q,modulename)
+
+q指问题
+
+modulename是模型名
 
 警告：如果语料过长，可能会引起报错
 
