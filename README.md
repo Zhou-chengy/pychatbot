@@ -120,10 +120,15 @@ q指问题
 示例：
 
 from module import module as chat
+
 chat.train(None,'chat','chat')
+
 while True:
+
     s = input()
+    
     d = chat.chat(None,s,'chat')
+    
     print(d)
 
 modulename是模型名
