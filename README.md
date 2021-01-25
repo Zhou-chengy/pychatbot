@@ -76,7 +76,7 @@ module.pyd:
 
 chat.pkl：
 
-这个模型包含222条语料（预训练模型）
+这个模型包含222条语料（预训练模型）（通用）
 
 chat.txt:
 
@@ -85,6 +85,15 @@ chat.pkl对应文件数据集，自己编写数据集请参考
 chat-1.pkl:
 
 内容与chat.pkl部分相同（女），96条预料
+
+语料库来源：
+1.chatterbot库语料库
+
+2.腾讯智能闲聊
+
+3.网上图片
+
+4.自编
 
 数据集编写规范：
 
@@ -107,6 +116,15 @@ modulename是模型名
 module.chat(self,q,modulename)
 
 q指问题
+
+示例：
+
+from module import module as chat
+chat.train(None,'chat','chat')
+while True:
+    s = input()
+    d = chat.chat(None,s,'chat')
+    print(d)
 
 modulename是模型名
 
