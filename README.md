@@ -1,4 +1,4 @@
-这是小懒猫AI推出的闲聊SDK1.0.1版本。这个SDK是pyd文件。
+这是小懒猫AI推出的闲聊SDK1.0.4版本。这个SDK是pyd文件。
 
 示例：
 
@@ -74,17 +74,17 @@ module.pyd:
 
 预训练模型在module-tool中
 
-chat.pkl：
+chat.h6：
 
-这个模型包含222条语料（预训练模型）（通用）
+这个模型包含280条语料（预训练模型）（通用）
 
 chat.txt:
 
 chat.pkl对应文件数据集，自己编写数据集请参考
 
-chat-1.pkl:
+chat-1.h6:
 
-内容与chat.pkl部分相同（女），96条预料
+内容与chat.h6部分相同（女），101条语料
 
 语料库来源：
 1.chatterbot库语料库
