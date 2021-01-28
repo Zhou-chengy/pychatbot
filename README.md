@@ -1,4 +1,4 @@
-这是小懒猫AI推出的闲聊SDK1.0.4版本。这个SDK是pyd文件。
+这是小懒猫AI推出的闲聊SDK1.0.5版本。这个SDK是pyd文件。
 
 示例：
 
@@ -34,8 +34,6 @@ ji填问题
 
 name填机器人的名字
 
-联系邮箱：earuil@outlook.com
-
 age填机器人的年龄
 
 xibe填机器人的性别
@@ -49,6 +47,8 @@ str1，str2填对比的文本
 要求：
 
 1.Python3.8.6rc1(必须要下载这个版本)
+
+2.chat.pyd需要requests==2.24(查天气）
 
 下载地址：https://www.python.org/downloads/release/python-386rc1/
 
@@ -69,6 +69,8 @@ str1，str2填对比的文本
 4.运行
 
 module.pyd:
+
+以下modulename不包括文件后缀.h6
 
 这个文件可以为用户定制机器人编写语料库，如编写客服机器人，聊天机器人
 
@@ -115,6 +117,31 @@ modulename是模型名
 
 module.chat(self,q,modulename)
 
+modulename是模型名
+Best:
+
+module.Best_train(self,filename,modulename)
+
+self填None
+
+filename填数据集名
+
+modulename填模型名
+
+Best数据集：
+
+问题（空一格） 答案
+
+module.Best_chat（self,q,modulename):
+
+(其实module_tool中的预训练模型也可以用这个函数使用）
+
+self不填
+
+q填问题
+
+modulename填模型名
+
 q指问题
 
 示例：
@@ -130,10 +157,22 @@ while True:
     d = chat.chat(None,s,'chat')
     
     print(d)
+    
+用户使用协议：
 
-modulename是模型名
+希望各位用户遵守以下条款：
+
+1.不将SDK发布到CSDN平台(CSDN平台下载很麻烦）
+
+2.在fork此储存库同时，不能更改README.md文件
+
+                              小懒猫AI
+
+联系邮箱：earuil@outlook.com
 
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
 
 gitee地址2：https://gitee.com/Lazy-cat-Xiao
+
+一般是github先更新
 
