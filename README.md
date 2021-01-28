@@ -82,7 +82,7 @@ chat.h6：
 
 chat.txt:
 
-chat.pkl对应文件数据集，自己编写数据集请参考
+chat.h6对应文件数据集，自己编写数据集请参考
 
 chat-1.h6:
 
