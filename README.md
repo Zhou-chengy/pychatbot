@@ -1,28 +1,26 @@
-这是小懒猫AI推出的闲聊SDK1.0.5版本。这个SDK是pyd文件。
+### 小懒猫闲聊SDK
+
+### 这是小懒猫AI推出的闲聊SDK1.0.5版本。这个SDK是pyd文件。
+
+### 使用说明
+
+chat.pyd:
 
 示例：
 
--- coding: 'utf-8' --
+    -- coding: 'utf-8' --
 
-from chat import chats
+    from chat import chats
 
-print("您需要什么帮助")
+    print("您需要什么帮助")
 
-while True:
+    while True:
 
-    sel = input()
-    
-    q = chats.chat(None,sel,"your-bot-name",age,"x","like")
-    
-    print(q)
+         sel = input()
 
-compare.pyd:
+         q = chats.chat(None,sel,"your-bot-name",age,"x","like")
 
-这是一个chat.pyd的依赖项
-
-pyd文件：
-
-pyd文件采用cython在windows编译的二进制文件，是无法进行反编译。
+         print(q)
 
 函数：
 
@@ -39,34 +37,6 @@ age填机器人的年龄
 xibe填机器人的性别
 
 like填机器人的爱好
-
-2.compare(str1,str2)
-
-str1，str2填对比的文本
-
-要求：
-
-1.Python3.8.6rc1(必须要下载这个版本)
-
-2.chat.pyd需要requests==2.24(查天气）
-
-下载地址：https://www.python.org/downloads/release/python-386rc1/
-
-2.requests2.24
-
-源代码：
-
-本SDK的代码禁止个人获取，只提供服务。
-
-使用方法：
-
-1.下载SDK之后解压，建议下载zip文件（git下载可跳过）
-
-2.把解压的文件改为您的项目名
-
-3.编写py文件，导入参考示例
-
-4.运行
 
 module.pyd:
 
@@ -88,8 +58,7 @@ chat-1.h6:
 
 内容与chat.h6部分相同（女），101条语料
 
-语料库来源：
-1.chatterbot库语料库
+语料库来源： 1.chatterbot库语料库
 
 2.腾讯智能闲聊
 
@@ -117,8 +86,7 @@ modulename是模型名
 
 module.chat(self,q,modulename)
 
-modulename是模型名
-Best:
+modulename是模型名 Best:
 
 module.Best_train(self,filename,modulename)
 
@@ -146,19 +114,57 @@ q指问题
 
 示例：
 
-from module import module as chat
+    from module import module as chat
 
-chat.train(None,'chat','chat')
+    chat.train(None,'chat','chat')
 
-while True:
+    while True:
 
-    s = input()
-    
-    d = chat.chat(None,s,'chat')
-    
-    print(d)
-    
-用户使用协议：
+        s = input()
+
+        d = chat.chat(None,s,'chat')
+
+        print(d)
+
+compare.pyd:
+
+这是一个chat.pyd的依赖项
+
+函数：
+
+compare(str1,str2)
+
+str1，str2填对比的文本
+
+### pyd文件：
+
+pyd文件采用cython在windows编译的二进制文件，是无法进行反编译。
+
+### 要求：
+
+1.Python3.8.6rc1(必须要下载这个版本)
+
+2.chat.pyd需要requests==2.24(查天气）
+
+下载地址：https://www.python.org/downloads/release/python-386rc1/
+
+2.requests2.24
+
+### 源代码：
+
+本SDK的代码禁止个人获取，只提供服务。
+
+使用方法：
+
+1.下载SDK之后解压，建议下载zip文件（git下载可跳过）
+
+2.把解压的文件改为您的项目名
+
+3.编写py文件，导入参考示例
+
+4.运行
+
+### 用户使用协议：
 
 希望各位用户遵守以下条款：
 
@@ -166,8 +172,7 @@ while True:
 
 2.在fork此储存库同时，不能更改README.md文件
 
-                              小懒猫AI
-
+                          小懒猫AI
 联系邮箱：earuil@outlook.com
 
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
@@ -175,4 +180,3 @@ gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
 gitee地址2：https://gitee.com/Lazy-cat-Xiao
 
 一般是github先更新
-
