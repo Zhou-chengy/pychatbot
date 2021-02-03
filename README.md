@@ -38,7 +38,7 @@ xibe填机器人的性别
 
 like填机器人的爱好
 
-module.pyd:
+### module.pyd:
 
 以下modulename不包括文件后缀.h6
 
@@ -48,7 +48,7 @@ module.pyd:
 
 chat.h6：
 
-这个模型包含404条语料（预训练模型）（通用）
+这个模型包含623条语料（预训练模型）（通用）
 
 chat.txt:
 
