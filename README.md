@@ -2,6 +2,14 @@
 
 ### 这是小懒猫AI推出的闲聊SDK1.0.6版本。这个SDK是pyd文件。
 
+### 优点
+
+相比同类产品几mb大小，闲聊SDK有轻便的优点，只有不到1mb大小。相比同类产品有许多第三方依赖库，闲聊SDK只依赖Python内置库。闲聊SDK虽然小，但功能强大。
+
+### 缺点
+
+只能使用Python3.8.6rc六十四位版
+
 ### 使用说明
 
 chat.pyd:
@@ -173,6 +181,7 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 2.在fork此储存库同时，不能更改README.md文件
 
                           小懒猫AI
+                          
 联系邮箱：earuil@outlook.com
 
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
