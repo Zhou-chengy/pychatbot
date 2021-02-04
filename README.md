@@ -104,6 +104,26 @@ filename填数据集名
 
 modulename填模型名
 
+示例：
+
+    from module import module as chat
+    
+    module.train(None,'module-tool\chat','module-tool\chat')
+    
+    while True:
+    
+        s = input()
+        
+        d = module.chat(None,s,'\module-tool\chat')
+        
+        if d==None:
+        
+            print('小智还不能理解')
+        else:
+        
+             print(d)
+
+
 Best数据集：
 
 问题（空一格） 答案
@@ -123,16 +143,21 @@ q指问题
 示例：
 
     from module import module as chat
-
-    chat.train(None,'chat','chat')
-
+    
+    module.train(None,'module-tool\chat','module-tool\chat')
+    
     while True:
-
+    
         s = input()
-
-        d = chat.chat(None,s,'chat')
-
-        print(d)
+        
+        d = module.Best_chat(None,s,'\module-tool\chat')
+        
+        if d==None:
+        
+            print('小智还不能理解')
+        else:
+        
+             print(d)
 
 compare.pyd:
 
