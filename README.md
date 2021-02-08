@@ -1,18 +1,10 @@
 ### 小懒猫闲聊SDK
 
-### 这是小懒猫AI推出的闲聊SDK1.0.6版本。这个SDK是pyd文件。
-
-### 优点:
-
-### 相比同类产品几mb大小，闲聊SDK有轻便的优点，只有不到1mb大小。相比同类产品有许多第三方依赖库，闲聊SDK只依赖Python内置库。闲聊SDK虽然小，但功能强大。
-
-### 缺点:
-
-### 只能使用Python3.8.6rc六十四位版
+### 这是小懒猫AI推出的闲聊SDK1.0.7版本。这个SDK是pyd文件。
 
 ### 使用说明
 
-### chat.pyd:
+chat.pyd:
 
 示例：
 
@@ -46,7 +38,9 @@ xibe填机器人的性别
 
 like填机器人的爱好
 
-### module.pyd:
+module.pyd:
+
+module:
 
 以下modulename不包括文件后缀.h6
 
@@ -56,7 +50,7 @@ like填机器人的爱好
 
 chat.h6：
 
-这个模型包含641条语料（预训练模型）（通用）
+这个模型包含404条语料（预训练模型）（通用）
 
 chat.txt:
 
@@ -76,59 +70,55 @@ chat-1.h6:
 
 数据集编写规范：
 
---问题--(空一格) --答案--(空一格) --相似度--(如1，0.9，0.8，0.7，0.33)（不超过1）
+--问题--(分割符，可自定义，但chat.txt,chat-1.txt必须是空格) --答案1#答案2--(分割符，可自定义，但chat.txt,chat-1.txt必须是空格) --相似度--(如1，0.9，0.8，0.7，0.33)（不超过1）
 
 函数
 
 训练函数
 
-module.train(self,filename,modulename)
+module.train(self,g,filename,modulename,encoding)
 
-self不填
+self填None
+
+g填分割符
 
 filename填数据集文件名(是txt文件)
 
 modulename是模型名
 
+encoding填编码（如gbk,utf-8)
+
 模型使用函数：
 
 module.chat(self,q,modulename)
 
-modulename是模型名 Best:
+self填None
 
-module.Best_train(self,filename,modulename)
+q填问题
+
+modulename填模型名(不包括.h6)
+
+modulename是模型名 
+
+Best:
+
+module.Best_train(self,g,filename,modulename，encoding)
 
 self填None
+
+g是分割符
 
 filename填数据集名
 
 modulename填模型名
 
-示例：
-
-    from module import module as chat
-    
-    module.train(None,'module-tool\chat','module-tool\chat')
-    
-    while True:
-    
-        s = input()
-        
-        d = module.chat(None,s,'\module-tool\chat')
-        
-        if d==None:
-        
-            print('小智还不能理解')
-        else:
-        
-             print(d)
-
+encoding填编码（如gbk,utf-8)
 
 Best数据集：
 
-问题（空一格） 答案
+问题（分割符，可自定义，但chat.txt,chat-1.txt必须是空格） 答案
 
-module.Best_chat（self,q,modulename):
+module.Best_chat（self,g,q,modulename):
 
 (其实module_tool中的预训练模型也可以用这个函数使用）
 
@@ -143,21 +133,66 @@ q指问题
 示例：
 
     from module import module as chat
-    
-    module.train(None,'module-tool\chat','module-tool\chat')
-    
+
+    chat.train(None,' ','module-tool\chat','module-tool\chat')
+
     while True:
-    
+
         s = input()
-        
-        d = module.Best_chat(None,s,'\module-tool\chat')
-        
-        if d==None:
-        
-            print('小智还不能理解')
-        else:
-        
-             print(d)
+
+        d = chat.chat(None,s,' ','module-tool\chat')
+
+        print(d)
+
+### bot:
+
+这是一个基于module的扩展,可以让聊天机器人不那么傻
+
+示例：
+
+    from module import bot
+
+    from module import compare
+
+    XXX = bot('XXX')
+
+    while True:
+
+        s = input()
+
+        a = XXX.bot(None,s,'module-tool\chat','不是说过一遍了',None)
+
+        print(a)
+
+        if float(compare(s,'再见'))>=0.7:
+
+            XXX.reset()
+
+            break
+
+这里的XXX可以自定义
+
+XXX = bot(botname)
+
+这个函数可以创建一个机器人，并生成XXX.bot文件
+
+botname指生成XXX.bot的文件名，不包括.bot。
+
+XX.bot(self,q,modulename,again,tihuan)
+
+self填None
+
+q填问题
+
+modulename指模型名（module)
+
+again填再次问一个问题的后缀，不用可填None或False
+
+tihuan填再次问一个问题的替换句，不用可填None或False(注意：again和tihuan必须使用其中一项）
+
+XXX.reset()
+
+重置机器人
 
 compare.pyd:
 
@@ -206,7 +241,7 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 2.在fork此储存库同时，不能更改README.md文件
 
                           小懒猫AI
-                          
+
 联系邮箱：earuil@outlook.com
 
 gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
