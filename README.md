@@ -236,11 +236,13 @@ XXX = bot(botname)
 
 botname指生成XXX.bot的文件名，不包括.bot。
 
-XX.bot(self,q,modulename,again,tihuan)
+XX.bot(self,q,Nonesay,modulename,again,tihuan)
 
 self填None
 
 q填问题
+
+Nonesay是当调用Best_chat函数的返回结果是None时，返回的语句。
 
 modulename指模型名（module)
 
