@@ -242,7 +242,7 @@ self填None
 
 q填问题
 
-Nonesay是当调用Best_chat函数的返回结果是None时，返回的语句。
+Nonesay是当调用Best_chat函数的返回结果是None时，返回的语句。(Nonesay参数可为列表(list)或字符串(str))
 
 modulename指模型名（module)
 
