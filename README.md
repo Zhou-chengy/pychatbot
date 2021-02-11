@@ -204,7 +204,7 @@ q指问题
     
         s = input()
         
-        a = Zhou.bot(s,'小智不能理解','module-tool\chat',None,['你烦不烦','到底你是机器人还是我是机器人'])
+        a = Zhou.bot(s,'，小智','小智不能理解','module-tool\chat',None,['你烦不烦','到底你是机器人还是我是机器人'])
         
         print(a)
 
@@ -236,11 +236,13 @@ XXX = bot(botname)
 
 botname指生成XXX.bot的文件名，不包括.bot。
 
-XX.bot(self,q,Nonesay,modulename,again,tihuan)
+XX.bot(self,q,chu,Nonesay,modulename,again,tihuan)
 
 self填None
 
 q填问题
+
+chu填对一些没用的词，系统会把这些词去掉。(chu参数可为列表(list)或字符串(str))
 
 Nonesay是当调用Best_chat函数的返回结果是None时，返回的语句。(Nonesay参数可为列表(list)或字符串(str))
 
