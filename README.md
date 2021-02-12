@@ -1,12 +1,12 @@
-### 小懒猫闲聊SDK
+# 小懒猫闲聊SDK
 
-### 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
+## 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
 
 ### 使用说明
 
-### chat.pyd:
+#### chat.pyd:
 
-示例：
+##### 示例：
 
 ```Python
 
@@ -26,7 +26,7 @@
    
 ```
 
-函数：
+##### 函数：
 
 1.chats.chat(self,ji,name,age,xibe,like)
 
@@ -42,9 +42,9 @@ xibe填机器人的性别
 
 like填机器人的爱好
 
-### module.pyd:
+#### module.pyd:
 
-### module:
+##### module:
 
 以下modulename不包括文件后缀.h6
 
@@ -52,19 +52,19 @@ like填机器人的爱好
 
 预训练模型在module-tool中
 
-chat.h6：
+###### chat.h6：
 
 这个模型包含404条语料（预训练模型）（通用）
 
-chat.txt:
+###### hat.txt:
 
 chat.h6对应文件数据集，自己编写数据集请参考
 
-chat-1.h6:
+###### chat-1.h6:
 
 内容与chat.h6部分相同（女），101条语料
 
-语料库来源：
+##### 语料库来源：
 
 1.chatterbot库语料库
 
@@ -74,7 +74,7 @@ chat-1.h6:
 
 4.自编
 
-数据集编写规范：
+##### 数据集编写规范：
 
 --问题--(分割符，可自定义，但chat.txt,chat-1.txt必须是空格) --答案1#答案2--(分割符，可自定义，但chat.txt,chat-1.txt必须是空格) --相似度--(如1，0.9，0.8，0.7，0.33)（不超过1）
 
@@ -94,7 +94,7 @@ modulename是模型名
 
 encoding填编码（如gbk,utf-8)
 
-模型使用函数：
+##### 模型使用函数：
 
 module.chat(self,q,modulename)
 
@@ -106,7 +106,7 @@ modulename填模型名(不包括.h6)
 
 modulename是模型名 
 
-Best:
+##### Best:
 
 module.Best_train(self,g,filename,modulename，encoding)
 
@@ -120,7 +120,7 @@ modulename填模型名
 
 encoding填编码（如gbk,utf-8)
 
-Best数据集：
+###### Best数据集：
 
 问题（分割符，可自定义，但chat.txt,chat-1.txt必须是空格） 答案
 
@@ -169,7 +169,7 @@ while True:
 
 ```
 
-### bot:
+##### bot:
 
 这是一个基于module的扩展,可以让聊天机器人不那么傻
 
