@@ -4,23 +4,27 @@
 
 ### 使用说明
 
-chat.pyd:
+### chat.pyd:
 
 示例：
 
-    -- coding: 'utf-8' --
+```Python
 
-    from chat import chats
+-- coding: 'utf-8' --
 
-    print("您需要什么帮助")
+ from chat import chats
 
-    while True:
+ print("您需要什么帮助")
 
-         sel = input()
+ while True:
 
-         q = chats.chat(None,sel,"your-bot-name",age,"x","like")
+     sel = input()
 
-         print(q)
+     q = chats.chat(None,sel,"your-bot-name",age,"x","like")
+
+     print(q)
+   
+```
 
 函数：
 
@@ -38,9 +42,9 @@ xibe填机器人的性别
 
 like填机器人的爱好
 
-module.pyd:
+### module.pyd:
 
-module:
+### module:
 
 以下modulename不包括文件后缀.h6
 
@@ -60,7 +64,9 @@ chat-1.h6:
 
 内容与chat.h6部分相同（女），101条语料
 
-语料库来源： 1.chatterbot库语料库
+语料库来源：
+
+1.chatterbot库语料库
 
 2.腾讯智能闲聊
 
@@ -132,17 +138,36 @@ q指问题
 
 示例：
 
-    from module import module as chat
+```Python
 
-    chat.train(None,' ','module-tool\chat','module-tool\chat')
+from module import module as chat
 
-    while True:
+chat.train(None,' ','module-tool\chat','module-tool\chat')
 
-        s = input()
+while True:
 
-        d = chat.chat(None,s,' ','module-tool\chat')
+    s = input()
 
-        print(d)
+    d = chat.chat(None,s,' ','module-tool\chat')#d = chat.Best_chat(None,s,' ','module-tool\chat
+
+    print(d)
+    
+```        
+        
+效果：
+
+``` 
+
+1次/##########/100%
+    
+......
+    
+    
+你好吗
+    
+你好
+
+```
 
 ### bot:
 
@@ -150,27 +175,33 @@ q指问题
 
 示例1：
 
-    from module import bot
+```Python
+
+from module import bot
     
-    from module import compare
+from module import compare
     
-    from module import module
+from module import module
     
-    module.train(None,' ','module-tool\chat','module-tool\chat','utf-8')
+module.train(None,' ','module-tool\chat','module-tool\chat','utf-8')
     
-    Zhou = bot('Zhou')
+Zhou = bot('Zhou')
     
-    Zhou.reset()
+Zhou.reset()
     
-    while True:
+while True:
     
-        s = input()
+    s = input()
         
-        a = Zhou.bot(s,'小智不能理解','module-tool\chat',',你烦不烦,None)
+    a = Zhou.bot(s,'小智不能理解','module-tool\chat',',你烦不烦,None)
         
-        print(a)
+    print(a)
         
+```
+
 效果：
+
+```
 
 1次/##########/100%
 
@@ -184,31 +215,34 @@ q指问题
 
 看到你好我都不知道要回什么那就回你好吧，你烦不烦
 
-
+```
 
 示例2(使用tihuan)：
 
-    from module import bot
-    
-    from module import compare
-    
-    from module import module
-    
-    module.train(None,' ','module-tool\chat','module-tool\chat','utf-8')
-    
-    Zhou = bot('Zhou')
-    
-    Zhou.reset()
-    
-    while True:
-    
-        s = input()
-        
-        a = Zhou.bot(s,'，小智','小智不能理解','module-tool\chat',None,['你烦不烦','到底你是机器人还是我是机器人'])
-        
-        print(a)
+```Python
 
+from module import bot
+    
+from module import compare
+    
+from module import module
+    
+module.train(None,' ','module-tool\chat','module-tool\chat','utf-8')
+    
+Zhou = bot('Zhou')
+    
+Zhou.reset()
+    
+while True:
+    
+    s = input()
+        
+    a = Zhou.bot(s,'，小智','小智不能理解','module-tool\chat',None,['你烦不烦','到底你是机器人还是我是机器人'])
+        
+    print(a)
+```
 效果：
+```
 
 1次/##########/100%
 
@@ -226,6 +260,7 @@ q指问题
 
 到底你是机器人还是我是机器人(答)
 
+```
 
 
 这里的XXX可以自定义
@@ -256,7 +291,7 @@ XXX.reset()
 
 重置机器人
 
-compare.pyd:
+### compare.pyd:
 
 这是一个chat.pyd的依赖项
 
@@ -274,17 +309,15 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 
 1.Python3.8.6rc1(必须要下载这个版本)
 
+下载地址：[Python](https://www.python.org/downloads/release/python-386rc1/)
+
 2.chat.pyd需要requests==2.24(查天气）
-
-下载地址：https://www.python.org/downloads/release/python-386rc1/
-
-2.requests2.24
 
 ### 源代码：
 
 本SDK的代码禁止个人获取，只提供服务。
 
-使用方法：
+### 使用方法：
 
 1.下载SDK之后解压，建议下载zip文件（git下载可跳过）
 
@@ -306,8 +339,8 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 
 联系邮箱：earuil@outlook.com
 
-gitee地址：https://gitee.com/Zhou-Chengy/pychatbot
+gitee地址：[gitee](https://gitee.com/Zhou-Chengy/pychatbot)
 
-gitee地址2：https://gitee.com/Lazy-cat-Xiao
+gitee地址2：[gitee2](https://gitee.com/Lazy-cat-Xiaolanmao)
 
 一般是github先更新
