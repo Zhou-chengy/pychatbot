@@ -1,6 +1,6 @@
 # 小懒猫闲聊SDK
 
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges) [![Gitter](https://badges.gitter.im/Pychatbot/community.svg)](https://gitter.im/Pychatbot/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![pypi]](https://img.shields.io/pypi/v/pychatbots?color=gold&label=pychatbot&logo=pychatbot&logoColor=grey&style=plastic) [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges) [![Gitter](https://badges.gitter.im/Pychatbot/community.svg)](https://gitter.im/Pychatbot/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
 
