@@ -1,5 +1,7 @@
 # 小懒猫闲聊SDK
 
+[![Gitter](https://badges.gitter.im/Pychatbot/community.svg)](https://gitter.im/Pychatbot/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
 
 ### 使用说明
