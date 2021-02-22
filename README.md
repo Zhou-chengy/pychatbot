@@ -2,7 +2,7 @@
 
 ![pypi](https://img.shields.io/pypi/v/pychatbots?color=gold&label=pychatbot&logo=pychatbot&logoColor=grey&style=plastic)  [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) [![unstable](http://badges.github.io/stability-badges/dist/unstable.svg)](http://github.com/badges/stability-badges) [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges) [![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges) [![Gitter](https://badges.gitter.im/Pychatbot/community.svg)](https://gitter.im/Pychatbot/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-## 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
+## 这是小懒猫AI推出的闲聊SDK1.1.3版本。这个SDK是pyd文件。
 
 ### 下载方式
 ```
@@ -12,6 +12,10 @@ pip install pychatbots
 python -m pip install pychatbots
 
 ```
+
+### 注意：1.采用pip下载不支持chat.pyd 2.使用module.pyd请先下载数据集
+
+
 ### 使用说明
 
 #### chat.pyd:
@@ -150,7 +154,7 @@ q指问题
 
 ```Python
 
-from module import module as chat
+from pychatbots.module import module as chat
 
 chat.train(None,' ','module-tool\chat','module-tool\chat')
 
@@ -187,11 +191,11 @@ while True:
 
 ```Python
 
-from module import bot
+from pychatbots.module import bot
     
-from module import compare
+from pychatbots.module import compare
     
-from module import module
+from pychatbots.module import module
     
 module.train(None,' ','module-tool\chat','module-tool\chat','utf-8')
     
@@ -231,7 +235,7 @@ while True:
 
 ```Python
 
-from module import bot
+from pychatbots.module import bot
     
 from module import compare
     
