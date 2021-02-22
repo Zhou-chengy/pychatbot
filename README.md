@@ -4,6 +4,14 @@
 
 ## 这是小懒猫AI推出的闲聊SDK1.1.1版本。这个SDK是pyd文件。
 
+### 下载方式
+```
+
+pip install pychatbots
+
+python -m pip install pychatbots
+
+```
 ### 使用说明
 
 #### chat.pyd:
