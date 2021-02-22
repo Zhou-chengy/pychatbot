@@ -343,6 +343,4 @@ pyd文件采用cython在windows编译的二进制文件，是无法进行反编�
 
 gitee地址：[gitee](https://gitee.com/Zhou-Chengy/pychatbot)
 
-gitee地址2：[gitee2](https://gitee.com/Lazy-cat-Xiaolanmao)
-
 一般是github先更新
